@@ -23,7 +23,7 @@ variable "cidr_block" {
 variable "availability_zones" {
   description = "List to specify the availability zones for which subnes will be created. By default all availability zones will be used."
   type        = map
-  default     = []
+  default     = {us-east-1 = ["us-east-1a", "us-east-1b", "us-east-1c"]}
 }
 
 variable "create_private_subnets" {
