@@ -12,6 +12,7 @@ variable "project" {
 variable "aws_region" {
   description = "The Amazon region"
   type        = string
+  default     = "us-west-2"
 }
 
 variable "cidr_block" {
