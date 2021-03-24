@@ -5,10 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-### Migration to Terraform 0.12
-Module is migrated to terraform 0.12, a few changes where applied. The example `vpc-public-private` is backwards compatible. The output type is changed for a few outputs.
-- input: `availability_zones` - replaced by a list over write the default which create in each zone a subnet.
-- output: `public_subnets` and `private_subnets` - redundant wrapper list removed. Output is a flat list.
+
+## [2.2.0] = 04-02-2021
+
+- fix CI
+- fix S3 endpoint service
+
+## [2.1.0] - 08-04-2020
+- Added: Adding subnets taggings capability when creating a VPC (#14)
+- Changed: Default vor `enable_create_defaults` from `true` to `false`.
 
 ## [2.0.0] - 03-09-2019
 - Upgrade to terraform 0.12, Migration directions:
@@ -56,7 +61,9 @@ Module is migrated to terraform 0.12, a few changes where applied. The example `
 - Fix region defaults
 - Initial release, based on https://040code.github.io/2017/09/19/talk-immutable-infrastructure/
 
-[Unreleased]: https://github.com/philips-software/terraform-aws-vpc/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/philips-software/terraform-aws-vpc/compare/2.2.0...HEAD
+[2.2.0]: https://github.com/philips-software/terraform-aws-vpc/compare/2.1.0...2.2.0
+[2.1.0]: https://github.com/philips-software/terraform-aws-vpc/compare/2.10.0...2.1.0
 [2.0.0]: https://github.com/philips-software/terraform-aws-vpc/compare/1.5.0...2.0.0
 [1.5.0]: https://github.com/philips-software/terraform-aws-vpc/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/philips-software/terraform-aws-vpc/compare/1.3.0...1.4.0
