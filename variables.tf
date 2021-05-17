@@ -22,7 +22,7 @@ variable "cidr_block" {
 
 variable "availability_zones" {
   description = "List to specify the availability zones for which subnes will be created. By default all availability zones will be used."
-  type        = list
+  type        = list(any)
   default     = []
 }
 
